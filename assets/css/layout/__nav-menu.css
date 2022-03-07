@@ -1,0 +1,20 @@
+.nav-menu {
+
+}
+
+.nav-menu__item {
+    display: inline;
+}
+
+.nav-menu__link {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    padding: 3rem 2rem;
+    text-transform: uppercase;
+}
+
+.nav-menu__text {
+    margin-left: 1.1rem;
+}
