@@ -1,0 +1,23 @@
+.banners {
+    padding-top: 9.7rem;
+}
+
+.banner-slide__item {
+    margin: 0 auto;
+    width: 90vw;
+}
+
+.banner-slide__link {
+    position: relative;
+}
+
+.bannner-slide__cover {
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.banner-slide__title {
+    left: 0;
+    position: absolute;
+    width: 100%;
+}

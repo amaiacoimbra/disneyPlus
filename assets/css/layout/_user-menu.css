@@ -45,20 +45,29 @@
     color: #FFF;
 }
 
-.user-menu__current-profile, .user-menu__profiles, .user-menu__options{
+.user-menu__current-profile, 
+.user-menu__profiles,
+.user-menu__options{
     position: relative;
     z-index: 2;
 }
 
-.user-menu__profiles, .user-menu__options{
+.user-menu__profiles, 
+.user-menu__options{
     animation: showFade .3s;
 }
 
-.user-menu .show-hover{
+.user-menu .show-hover {
     display: none;
 }
 
-.user-menu:hover .show-hover, .user-menu:hover .user-profile__title{
+.user-menu:hover .show-hover,
+.user-menu:hover .user-profile__title{
+    display: block;
+}
+
+.user-menu.active .show-hover,
+.user-menu.active .user-profile__title {
     display: block;
 }
 
