@@ -16,3 +16,7 @@
     font-family: 'Font Awesome 6 Free';  
     font-size: .9rem;
 }
+
+.controls-slider__item.active {
+    color: #fff;
+}
