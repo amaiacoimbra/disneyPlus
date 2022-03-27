@@ -28,6 +28,7 @@
 
 .bannner-slide__cover {
     border-radius: .5rem;
+    box-shadow: #000 0rem 2rem 3rem -2rem;
     display: block;
     width: 100%; 
 }
