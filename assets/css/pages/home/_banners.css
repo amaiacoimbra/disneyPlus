@@ -14,17 +14,16 @@
 }
 
 .banner-slide__link::before {
-    border: 4px solid #fff;
+    border: .4rem solid rgba(255, 255, 255, 0);
+    border-radius: .5rem;
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    transition: border .3s;
 }
 
-.banner-slide__link:hover {
-    
+.banner-slide__link:hover::before {
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .bannner-slide__cover {
