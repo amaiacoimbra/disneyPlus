@@ -1,0 +1,3 @@
+.controls-slider__item::before {
+    content: '\f111';
+}
