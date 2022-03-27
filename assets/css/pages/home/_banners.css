@@ -56,3 +56,8 @@
     right: 3.6rem;
     position: absolute;
 }
+
+.banner-slider .controls-slider {
+    bottom: 1.6rem;
+    right: 11.6rem;
+}
