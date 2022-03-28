@@ -1,3 +1,3 @@
 import header from "./modules/header.js"
 
-header.init
+header.init()
