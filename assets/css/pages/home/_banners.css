@@ -52,10 +52,16 @@
 
 
 .banner-slider__title {
+    animation: slideLeft 1s;
     left: 0;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.banner-slider__title.active {
+    display: block;
 }
 
 .banners .arrow-slider{
