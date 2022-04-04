@@ -1,0 +1,27 @@
+.category-menu {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.category-menu__item {
+    position: relative;
+}
+
+.category-menu__link {
+    background: linear-gradient(to bottom, #2B2B36, #1C1C25);
+    border-radius: 1rem;
+    border: .3rem solid #404048;
+    box-shadow: #0f1119 0rem 2rem 2rem -1rem;
+    display: block;
+    position: relative;
+}
+
+.category-menu__video{
+    border-radius: 1rem;
+    position: absolute;
+    width: 100%;
+}
+
+.category-menu__img {
+    width: 100%;
+}

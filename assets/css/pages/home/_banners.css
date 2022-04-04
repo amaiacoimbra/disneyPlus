@@ -2,6 +2,7 @@
     align-items: center;
     display: flex;
     padding-top: 9.7rem;
+    position: relative;
     overflow: hidden;
 }
 
@@ -12,7 +13,8 @@
 
 .banner-slider__item {
     flex-shrink: 0;
-    margin: 0 1rem 3rem;
+    padding: 0 1rem 3rem;
+    position: relative;
     width: 90vw;
 }
 
@@ -34,7 +36,7 @@
     border-color: rgba(255, 255, 255, 0.7);
 }
 
-.bannner-slider__cover {
+.banner-slider__cover {
     border-radius: .5rem;
     box-shadow: #000 0rem 2rem 3rem -2rem;
     display: block;
@@ -43,25 +45,58 @@
 
 
 .banner-slider__title {
+    animation: slideLeft 1s;
     left: 0;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
 }
 
-.banners .arrow-slider--left {
-    left: 3.6rem;
+.banner-slider__title.active {
+    display: block;
+}
+
+.banners .arrow-slider{
+    margin-top: -3rem;
     position: absolute;
     z-index: 2;
 }
 
+.banners .arrow-slider--left {
+    left: 3.6rem;
+}
+
 .banners .arrow-slider--right {
     right: 3.6rem;
-    position: absolute;
-    z-index: 2;
 }
 
 .banners .controls-slider {
     bottom: 4.6rem;
     right: 11.6rem;
+}
+
+@media screen and (max-width:1024px){
+    .banners {
+        padding-top: 8.2rem;
+    }
+
+    .banner-slider__item {
+        width: 85vw;
+    }
+
+    .banners .arrow-slider--left {
+        left: 1rem;
+    }
+    
+    .banners .arrow-slider--right {
+        right: 1rem;
+    }
+    
+    .banners .controls-slider {
+        bottom: 4.2rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+        
 }
