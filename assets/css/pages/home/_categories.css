@@ -2,7 +2,7 @@
     margin: 1.9rem auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 90vw;
+    width: 91vw;
 }
 
 .category-menu {
@@ -48,4 +48,14 @@ category-menu__link:hover .category-menu__video {
 
 .category-menu__img {
     width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .categories {
+        width: 85vw;
+    }
+    .category-menu__link {
+        border-width: .1rem;
+        box-shadow: #0f1119 0rem 2rem 1rem -1rem;
+    }
 }
