@@ -1,5 +1,5 @@
 .categories {
-    margin: 0 auto;
+    margin: 1.9rem auto;
     padding-left: 1rem;
     padding-right: 1rem;
     width: 90vw;
@@ -13,6 +13,11 @@
 
 .category-menu__item {
     position: relative;
+    transition: transform .3s;
+}
+
+.category-menu__item:hover {
+    transform: scale(1.05);
 }
 
 .category-menu__link {
@@ -22,6 +27,11 @@
     box-shadow: #0f1119 0rem 2rem 2rem -1rem;
     display: block;
     position: relative;
+    transition: border-color .3s;
+}
+
+.category-menu__link:hover {
+    border-color: rgb(235, 235, 235);
 }
 
 .category-menu__video{
