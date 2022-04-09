@@ -18,6 +18,14 @@
     width: 90vw;
 }
 
+.banner-slider__counter{
+    font-size: 2rem;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    z-index: 10;
+}
+
 .banner-slider__link {
     display: block;
     position: relative;
