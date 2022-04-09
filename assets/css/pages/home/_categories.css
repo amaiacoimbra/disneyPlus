@@ -1,6 +1,7 @@
 .category-menu {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
 }
 
 .category-menu__item {
