@@ -27,17 +27,23 @@
     box-shadow: #0f1119 0rem 2rem 2rem -1rem;
     display: block;
     position: relative;
-    transition: border-color .3s;
+    transition: all .3s;
 }
 
 .category-menu__link:hover {
+    background: none;
     border-color: rgb(235, 235, 235);
 }
 
 .category-menu__video{
     border-radius: 1rem;
     position: absolute;
+    top: .2rem;
     width: 100%;
+}
+
+category-menu__link:hover .category-menu__video {
+    display: block;
 }
 
 .category-menu__img {
