@@ -4,10 +4,6 @@ const btnNext = document.querySelector('[data-banner="btn-next"]')
 const btnPrevious = document.querySelector('[data-banner="btn-previous"]')
 const btnControls = document.querySelectorAll('[data-banner="btn-control"]')
 const imgTitles = document.querySelectorAll('[data-banner="img-title"]')
-<<<<<<< HEAD
-=======
-
->>>>>>> 1b1c4d5ce3be5f025305f8fabfe1ef437a2d4a78
 const state = {
     onMouseDownPosition: 0,
     movementPosition: 0,
@@ -90,10 +86,7 @@ function onMouseDown(event, index) {
     state.onMouseDownPosition = event.clientX
     state.currentSliderPosition = event.clientX - state.lastTranslatePosition
     state.currentSlideIndex = index
-<<<<<<< HEAD
     animateTransition (false)
-=======
->>>>>>> 1b1c4d5ce3be5f025305f8fabfe1ef437a2d4a78
     slide.addEventListener('mousemove', onMouseMove)
 }
 
@@ -104,7 +97,6 @@ function onMouseMove(event) {
 
 function onMouseUp(event) {
     const slide = event.currentTarget
-<<<<<<< HEAD
     const movementQtd = event.type.includes('touch') ? 50 : 150
     if (state.movementPosition > movementQtd) {
         backwardSlide()
@@ -112,15 +104,6 @@ function onMouseUp(event) {
         forwardSlide()
     } else {
         setVisibleSlide(state.currentSlideIndex)
-=======
-    if (state.movementPosition > 150) {
-        backwardSlide()
-    } else if (state.movementPosition < -150) {
-        forwardSlide()
-    } else {
-        const calc = getCenterPosition(state.currentSlideIndex)
-        translateSlide(calc)
->>>>>>> 1b1c4d5ce3be5f025305f8fabfe1ef437a2d4a78
     }
     slide.removeEventListener('mousemove', onMouseMove)
 }
@@ -130,7 +113,6 @@ function onMouseLeave(event) {
     slide.removeEventListener('mousemove', onMouseMove)
 }
 
-<<<<<<< HEAD
 function onTouchStart(event,index) {
     const slide = event.currentTarget
     slide.addEventListener('touchmove',onTouchMove)
@@ -156,11 +138,6 @@ function onResizeWindow() {
 function setListeners() {
     btnNext.addEventListener('click', forwardSlide)
     btnPrevious.addEventListener('click', backwardSlide)
-=======
-
-function setListeners() {
-    btnNext.addEventListener('click', forwardSlide)
->>>>>>> 1b1c4d5ce3be5f025305f8fabfe1ef437a2d4a78
     sliderItems.forEach(function (slide, index) {
         const link = slide.querySelector('.banner-slider__link')
         link.addEventListener('click', preventDefault)
@@ -173,7 +150,6 @@ function setListeners() {
         btnControls[index].addEventListener('click', function (event) {
             onControlButtonClick(event, index)
         })
-<<<<<<< HEAD
         slide.addEventListener('touchstart',function(event) {
             onTouchStart(event,index)
         })    
@@ -188,9 +164,6 @@ function setListeners() {
             onResizeWindow()
         }, 1000)
     })    
-=======
-    })
->>>>>>> 1b1c4d5ce3be5f025305f8fabfe1ef437a2d4a78
 }
 
 function init() {
