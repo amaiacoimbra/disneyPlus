@@ -154,13 +154,11 @@ function setListeners() {
             onTouchStart(event,index)
         })    
         slide.addEventListener('touchend',onTouchEnd)
-
     })
     let resizeTimeOut;
     window.addEventListener('resize',function(event) {
         clearTimeout(resizeTimeOut)
          resizeTimeOut = setTimeout(function() {
-            console.log('resize')
             onResizeWindow()
         }, 1000)
     })    
