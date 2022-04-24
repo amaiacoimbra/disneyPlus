@@ -56,8 +56,11 @@
 }
 
 .movie-carousel .arrow-slider{
+    height: 100%;
     margin-top: -2.5rem;
+    opacity: 0;
     position: absolute;
+    transition: opacity .3s;
     z-index: 2;
 }
 
@@ -87,9 +90,12 @@
         width: calc(85vw / 2);
     }
     .movie-carousel .arrow-slider--left {
-        left: 1rem;
+        padding: 0 1rem;
+        left: 0;
     }
     .movie-carousel .arrow-slider--right {
-        right: 1rem;
+        padding: 0 1rem;
+        right: 0;
+
     }
 }
