@@ -39,34 +39,36 @@ const animateTransition = (active) => {
 }
 
 function setArrowButtonsDisplay() {
+    const { btnPrevious, btnNext,state } = collectionData[currentCollectionIndex]
     btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
-    btnNext.style.display = state.currentSlideIndex === (sliderItems.length -1) ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === getLastSlideIndex() ? 'none' : 'block'
 }
 
 const setVisibleSlide = (slideIndex) => {
     const { state } = collectionData[currentCollectionIndex]
     state.currentSlideIndex = slideIndex
     const centerPosition = getCenterPosition(slideIndex)
+    setArrowButtonsDisplay()
     animateTransition(true)
     translateSlide(centerPosition)
 }
 
 const backwardSlide = () => {
     const { state } = collectionData[currentCollectionIndex]
-    if (state.currentItemIndex > 0) {
-        setVisibleSlide(state.currentItemIndex - 1)
+    if (state.currentSlideIndex > 0) {
+        setVisibleSlide(state.currentSlideIndex - 1)
     } else {
-        setVisibleSlide(state.currentItemIndex)
+        setVisibleSlide(state.currentSlideIndex)
     }
 }
 
 const forwardSlide = () => {
     const { state } = collectionData[currentCollectionIndex]
     const lastSlideIndex = getLastSlideIndex()
-    if (state.currentItemIndex < lastSlideIndex) {
-        setVisibleSlide(state.currentItemIndex + 1)
+    if (state.currentSlideIndex < lastSlideIndex) {
+        setVisibleSlide(state.currentSlideIndex + 1)
     } else {
-        setVisibleSlide(state.currentItemIndex)
+        setVisibleSlide(state.currentSlideIndex)
     }
 }
 

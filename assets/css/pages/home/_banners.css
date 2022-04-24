@@ -66,12 +66,15 @@
 }
 
 .banners .arrow-slider{
+    background: red;
+    height: 100%;
     margin-top: -3rem;
     position: absolute;
     z-index: 2;
 }
 
 .banners .arrow-slider--left {
+    padding-left: 3.6rem;
     left: 3.6rem;
 }
 
