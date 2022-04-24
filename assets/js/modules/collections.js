@@ -38,6 +38,11 @@ const animateTransition = (active) => {
     }
 }
 
+function setArrowButtonsDisplay() {
+    btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === (sliderItems.length -1) ? 'none' : 'block'
+}
+
 const setVisibleSlide = (slideIndex) => {
     const { state } = collectionData[currentCollectionIndex]
     state.currentSlideIndex = slideIndex

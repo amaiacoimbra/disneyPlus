@@ -5,7 +5,7 @@ const btnPrevious = document.querySelector('[data-banner="btn-previous"]')
 const btnControls = document.querySelectorAll('[data-banner="btn-control"]')
 const imgTitles = document.querySelectorAll('[data-banner="img-title"]')
 const state = {
-    onMouseDownPosition: 0,
+    mouseDownPosition: 0,
     movementPosition: 0,
     lastTranslatePosition: 0,
     currentSliderPosition: 0,
@@ -22,22 +22,6 @@ function getCenterPosition(index) {
     const margin = (document.body.clientWidth - slide.offsetWidth) / 2
     const centerPosition = margin - (slide.offsetWidth * index)
     return centerPosition
-}
-
-function forwardSlide() {
-    if (state.currentSlideIndex < sliderItems.length - 1) {
-        setVisibleSlide(state.currentSlideIndex = 1)
-    } else {
-        setVisibleSlide(state.currentSlideIndex)
-    }
-}
-
-function backwardSlide() {
-    if (state.currentSlideIndex > 0) {
-        setVisibleSlide(state.currentSlideIndex - 1)
-    } else {
-        setVisibleSlide(state.currentSlideIndex)
-    }
 }
 
 function animateTransition(active) {
@@ -64,13 +48,35 @@ function activeImageTitle(index) {
     imgTitle.classList.add('active')
 }
 
+function setArrowButtonsDisplay() {
+    btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
+    btnNext.style.display = state.currentSlideIndex === (sliderItems.length -1) ? 'none' : 'block'
+}
+
 function setVisibleSlide(index) {
     state.currentSlideIndex = index
     const position = getCenterPosition(index)
+    setArrowButtonsDisplay()
     activeControlButton(index)
     activeImageTitle(index)
     animateTransition(true)
     translateSlide(position)
+}
+
+function forwardSlide() {
+    if (state.currentSlideIndex < sliderItems.length - 1) {
+        setVisibleSlide(state.currentSlideIndex + 1)
+    } else {
+        setVisibleSlide(state.currentSlideIndex)
+    }
+}
+
+function backwardSlide() {
+    if (state.currentSlideIndex > 0) {
+        setVisibleSlide(state.currentSlideIndex - 1)
+    } else {
+        setVisibleSlide(state.currentSlideIndex)
+    }
 }
 
 function preventDefault(event) {
