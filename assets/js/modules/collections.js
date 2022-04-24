@@ -110,6 +110,7 @@ const onMouseUp = (event) => {
     } else {
         setVisibleSlide(state.currentSlideIndex)
     }
+    state.movement = 0
     const item = event.currentTarget
     item.removeEventListener('mousemove', onMouseMove)
 }

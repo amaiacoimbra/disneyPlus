@@ -65,6 +65,7 @@ function setArrowButtonsDisplay() {
 function setVisibleSlide(index) {
     state.currentSlideIndex = index
     const position = getCenterPosition(index)
+    activeCurrentSlides()
     setArrowButtonsDisplay()
     activeControlButton(index)
     activeImageTitle(index)
@@ -120,6 +121,7 @@ function onMouseUp(event) {
     } else {
         setVisibleSlide(state.currentSlideIndex)
     }
+    state.movementPosition = 0
     slide.removeEventListener('mousemove', onMouseMove)
 }
 
