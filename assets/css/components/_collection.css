@@ -23,8 +23,12 @@
 }
 
 .movie-carousel__item {
+    opacity: .5;
     padding:  0 1rem 2.5rem;
     width: calc(91vw / 5);
+}
+.movie-carousel__item.active {
+    opacity: 1;
 }
 
 .movie-carousel__link{

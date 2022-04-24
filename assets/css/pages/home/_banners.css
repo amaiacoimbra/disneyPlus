@@ -13,9 +13,14 @@
 
 .banner-slider__item {
     flex-shrink: 0;
+    opacity: .5;
     padding: 0 1rem 3rem;
     position: relative;
     width: 91vw;
+}
+
+.banner-slider__item.active {
+    opacity: 1;
 }
 
 .banner-slider__counter{
