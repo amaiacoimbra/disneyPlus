@@ -38,7 +38,18 @@ const animateTransition = (active) => {
     }
 }
 
-function setArrowButtonsDisplay() {
+const activeCurrentItems = () => {
+    const { carouselItems, state } = collectionData[currentCollectionIndex]
+    carouselItems.forEach((item, itemIndex) => {
+        item.classList.remove('active')
+        const firstItemIndex = state.currentSlideIndex * itemsPerSlide
+        if(itemIndex >= firstItemIndex && itemIndex < firstItemIndex + itemsPerSlide) {
+            item.classList.add('active')
+        }
+    })
+}
+
+const setArrowButtonsDisplay = () => {
     const { btnPrevious, btnNext,state } = collectionData[currentCollectionIndex]
     btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
     btnNext.style.display = state.currentSlideIndex === getLastSlideIndex() ? 'none' : 'block'
@@ -48,6 +59,7 @@ const setVisibleSlide = (slideIndex) => {
     const { state } = collectionData[currentCollectionIndex]
     state.currentSlideIndex = slideIndex
     const centerPosition = getCenterPosition(slideIndex)
+    activeCurrentItems()
     setArrowButtonsDisplay()
     animateTransition(true)
     translateSlide(centerPosition)

@@ -48,6 +48,15 @@ function activeImageTitle(index) {
     imgTitle.classList.add('active')
 }
 
+const activeCurrentSlides = () => {
+    sliderItems.forEach((slide, slideIndex) => {
+        slide.classList.remove('active')
+        if(slideIndex === state.currentSlideIndex ) {
+            slide.classList.add('active')
+        }
+    })
+}
+
 function setArrowButtonsDisplay() {
     btnPrevious.style.display = state.currentSlideIndex === 0 ? 'none' : 'block'
     btnNext.style.display = state.currentSlideIndex === (sliderItems.length -1) ? 'none' : 'block'
