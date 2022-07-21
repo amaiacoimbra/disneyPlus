@@ -1,0 +1,34 @@
+.footer {
+    background-color: black;
+    padding: 2.3rem 0 2.6rem;
+    text-align: center;
+}
+
+.footer__wrapper{
+    margin: 0 auto;
+    width: 47rem;
+}
+
+.footer-menu__link,
+.footer__about,
+.footer_copyright {
+    font-size: 1.2rem;
+    color: #AFAFAF;
+}
+
+.footer__about{
+    margin-bottom: 1.5rem;
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-menu__item {
+    margin: 1.5rem;
+}
+
+.footer-menu__link {
+    padding: 0 1rem;
+}
