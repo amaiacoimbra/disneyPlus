@@ -42,7 +42,7 @@
     width: 100%;
 }
 
-category-menu__link:hover .category-menu__video {
+.category-menu__link:hover .category-menu__video {
     display: block;
 }
 

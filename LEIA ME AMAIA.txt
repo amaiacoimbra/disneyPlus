@@ -3,7 +3,7 @@ Configuração do Clone do site Disney Plus - Video Referência
 Disney+ Clone (HTML, CSS e Javascript) - Parte 23: Footer e Finalização do Projeto 
 https://www.youtube.com/watch?v=uOtwCb-hZmg&list=PLrxph-IV8wY7IG5oGr8_hado37DkTwsPa&index=23
 
-Tempo para continuar editando - 23 Minitos e 19 segundos
+Tempo para continuar editando - 23 Minutos e 19 segundos
 
 Ultimo campo de código editado
 
